@@ -5,12 +5,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <title>Assignment of Ayberk Çam</title>
 </head>
-<body>
+<body onload ="welcomefunction();document.body.style.backgroundColor = 'pink' "
+      onresize="document.body.style.backgroundColor = 'lightblue'"
+      onkeydown="document.body.style.backgroundColor = 'white'"
+      onkeyup="document.body.style.backgroundColor = 'lightyellow'">
+
+<script>
+  function welcomefunction(){
+    alert("Welcome!");
+  }
+</script>
 
   <p>
     <strong>Introduction to Information Systems</strong>
   </p>
-  <p class="centered">
+  <p class="centered" onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'">
     <em>
       Ayberk Çam
       <br>
@@ -19,20 +28,21 @@
   </p>
 <p>Evolution of homo species</p>
 
-<ul>
+<ul id="unorderedL" onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'">
   <li>Homo habilis (able man)</li>
   <li>Homo erectus (Upright man)</li>
   <li>Homo neanderthalensis</li>
   <li>Homo floresiensis</li>
   <li>Homo sapiens
-    <ul>
+    <ul id="insideUL" onclick="document.getElementById('insideUL').style.backgroundColor='orange'">
       <li>Homo sapiens sapiens</li>
     </ul>
   </li>
   
 </ul> 
 
-<h1>Human Evolution</h1>
+<h1 onmouseover="style.color='orange'; style.backgroundColor='lightgreen'"
+    onmouseout="style.color='red'; style.backgroundColor='white'">Human Evolution</h1>
 <img src="evolution-diagram.png" alt="Evolution Diagram">
 <p>Click on <a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens" target="_blank"> this-link </a>to go on source of the Image.</p>   
 
@@ -40,7 +50,7 @@
 <p>
     The following image works as a link:<br>
     <a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-       <img alt="Evolution Diagram" src="evolution-diagram.png">
+       <img id='myImg' alt="Evolution Diagram" onclick="alert(document.getElementById('myImg').alt)" src="evolution-diagram.png">
     </a>
 </p>
 <table>
